@@ -12,13 +12,12 @@ html, body { overflow: hidden; }
 	position: absolute;
 	top: 50px;
 	left: 50px;
-	height: 300px;
 	width: 200px;
+	text-align: center;
 }
 
 h1 {
 	color: #fff;
-	text-align: center;
 	text-transform: uppercase;
 	font-weight: lighter;
 /*	border-bottom: solid #fff 1px;
@@ -31,6 +30,53 @@ h1 {
 
 .red {
 	color: #C0392B;
+}
+
+.button-small{
+    color: #fff !important;
+    word-spacing: 0.25em;
+   font-family: 'Open Sans', sans-serif;
+   text-transform: uppercase;
+   border: none;
+    line-height: 22px;
+    padding: 12px 13px 11px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    text-decoration: none;
+}
+.button-small:visited{
+      color: #fff;
+}
+.button-small{
+    padding: 6px 12px 5px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    text-shadow: none;
+    cursor: pointer;
+}
+.button-small:hover{
+    color: rgba(255,255,255, 0.75);
+    text-decoration: none;
+    -webkit-box-shadow:inset 0 10px 20px rgba(255,255,255, 0.10);
+    -moz-box-shadow: inset 0 10px 20px rgba(255,255,255, 0.10);
+    box-shadow: inset 0 10px 20px rgba(255,255,255, 0.10);
+}
+.button-small:active {
+    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+    -moz-box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+    box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+}
+.rounded3 {
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.reddish {
+    background: #d5383c;;
 }
 
 .pretty-form{
@@ -55,3 +101,14 @@ h1 {
   padding: 0.6em 0.6em;
   width: 100%;
 }
+
+.credits {
+	color: #999;
+	font-size: 110%;
+	line-height: 2;
+}
+
+*::-webkit-input-placeholder { color: #999;}
+*:-moz-placeholder { color: #999;}
+*::-moz-placeholder { color: #999;}
+*:-ms-input-placeholder { color: #999;}
