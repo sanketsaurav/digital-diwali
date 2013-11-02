@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+body {
+    background: #010101;
+    font-size:62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+html, body { overflow: hidden; }
+
+#banner {
+/*	background: rgba(142, 68, 173, 0.15);*/
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	height: 300px;
+	width: 200px;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: lighter;
+/*	border-bottom: solid #fff 1px;
+	padding-bottom: 5px;*/
+}
+
+.neon {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.red {
+	color: #C0392B;
+}
+
+.pretty-form{
+  position: relative;
+  padding: 5px;
+}
+.pretty-form input[type="text"]{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px dashed #8E44AD;
+  background: #000;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  
+  font-size: 1.5em;
+  padding: 0.6em 0.6em;
+  width: 100%;
+}
