@@ -17,10 +17,14 @@ def greeting(sender, receiver):
 	receiver = receiver.split('-')[0]
 
 	# check if name is fishy
-	if not re.match(NAME_REGEX, sender) and re.match(NAME_REGEX, receiver):
+	if not (re.match(NAME_REGEX, sender) and re.match(NAME_REGEX, receiver)):
 		return redirect('/')
 	
 	return render_template('index.html', sender=sender.upper(), receiver=receiver.upper())
+
+@app.route('/<path:dummy>')
+def dummy(dummy):
+	return redirect('/')
 
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="banner">
-        <h1>Wish <span class="red">Happy Diwali!</span></h1>
+        <a href="/"><h1>Wish <span class="red">Happy Diwali!</span></h1></a>
             <div class="pretty-form">
                 <input id="sender_name" type="text" placeholder="Your name">
             </div>
@@ -62,7 +62,7 @@
         var sender_name = $("#sender_name").val();
         var receiver_name = $("#receiver_name").val();
         if (sender_name && receiver_name) {
-            url = 'http://diwali.dfth.in/' + sender_name + '/' + receiver_name;
+            url = '/' + sender_name.replace(/ /g,'-').toLowerCase() + '/' + receiver_name.replace(/ /g,'-').toLowerCase();
             document.location = url;
         }
     });
