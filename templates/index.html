@@ -17,6 +17,7 @@
     <!-- Load the fireworks script and stylesheet -->
     <script type="text/javascript" src="/static/fireworks.js"></script>
     <link type="text/css" href="/static/app.css" rel="stylesheet" />
+    <link href="static/fireworks2.css" rel="stylesheet">
     <script type="text/javascript" src="/static/app.js"></script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "ur-e3af87c1-92ec-d721-2b7d-2bcfe923968", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
@@ -45,6 +46,10 @@
             <span class='st_facebook_hcount' displayText='Facebook'></span>
             <span class='st_twitter_hcount' displayText='Tweet'></span>
     </div>
+    <aside id="library">
+      <img src="static/big-glow.png" id="big-glow" />
+      <img src="static/small-glow.png" id="small-glow" />
+    </aside>
     <script>
     $("#greetbutton").on('click',function() {
         var sender_name = $("#sender_name").val();
@@ -55,5 +60,7 @@
         }
     });
     </script>
+    <script src="js/requestanimframe.js"></script>
+  <script src="js/fireworks2.js"></script>
 </body>
 </html>
