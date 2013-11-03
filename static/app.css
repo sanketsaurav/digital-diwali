@@ -12,10 +12,19 @@ html, body { overflow: hidden; }
 	position: absolute;
 	top: 50px;
 	left: 50px;
-	width: 200px;
+	width: 210px;
 	text-align: center;
 }
 
+a {
+  border-bottom: dotted 1px #999;
+    text-decoration: none;
+  color: #999;
+}
+
+a:hover {
+  color: #C0392B;
+}
 h1 {
 	color: #fff;
 	text-transform: uppercase;

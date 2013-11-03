@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digital Diwali - Happy Diwali as a Service</title>
+
+    <!-- If Chrome Frame is enabled, let's use it! -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+    <meta name="Description" content="" />
+
+    <!-- Load jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Load Canvas support for IE8 and below (IE9 support Canvas) -->
+    <!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
+
+    <!-- Load the fireworks script and stylesheet -->
+    <script type="text/javascript" src="/static/fireworks.js"></script>
+    <link type="text/css" href="/static/app.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/app.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-e3af87c1-92ec-d721-2b7d-2bcfe923968", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+</head>
+<body>
+    <div id="banner">
+        <h1>Wish <span class="red">Happy Diwali!</span></h1>
+            <div class="pretty-form">
+                <input id="sender_name" type="text" placeholder="Your name">
+            </div>
+            <div class="pretty-form">
+                <input id="receiver_name" type="text" placeholder="A friend's name">
+                <input type="hidden" id="firetext" value="WISH YOU HAPPY-DIWALI">
+                <input type="hidden" id="sender" value="{{sender}}">
+                <input type="hidden" id="receiver" value="{{receiver}}">
+            </div>
+            <br>
+            <button class="button-small reddish rounded3" id="greetbutton">Greet</button>
+            <div class="credits">Made with <span class="red">&hearts;</span> by <a href="http://fb.com/sanketsaurav">Sanket</a> &amp; <a href="https://www.facebook.com/profile.php?id=100003645443086">Abhishek</a>.<br>With a lot of help.</div>
+            <br>
+            <br>
+            <div class="credits">
+                Press <strong>any key</strong> or <strong>click</strong> for fireworks.<br>
+            </div>
+            <br><br>
+            <span class='st_facebook_hcount' displayText='Facebook'></span>
+            <span class='st_twitter_hcount' displayText='Tweet'></span>
+    </div>
+    <script>
+    $("#greetbutton").on('click',function() {
+        var sender_name = $("#sender_name").val();
+        var receiver_name = $("#receiver_name").val();
+        if (sender_name && receiver_name) {
+            url = 'http://localhost:5000/' + sender_name + '/' + receiver_name;
+            document.location = url;
+        }
+    });
+    </script>
+</body>
+</html>

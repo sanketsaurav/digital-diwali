@@ -35,6 +35,10 @@ $(document).ready(function(){
     }); 
 
     var params = location.search;
+    if ($("#sender").val() && $("#receiver").val()) {
+    $("#firetext").val($("#sender").val() + ' WISHES HAPPY-DIWALI ' + $("#receiver").val());
+    FireworkDisplay.launchText();
+    }
     var message = $('#firetext').val();
     FireworkDisplay.launchText();
 
@@ -89,7 +93,6 @@ FireworkDisplay = {
         setTimeout("FireworkDisplay.addFireworks()", 1000/this.DEPLOYMENT_RATE);
     },
     launchText :  function() {
-
         this.fireworks = [];
         this.blockPointer = 0;
         clearTimeout(this.gameloop);
@@ -153,8 +156,6 @@ FireworkDisplay = {
         this.gameloop = setInterval("FireworkDisplay.updateDisplay()", 1000/this.FRAME_RATE);
         
         this.addFireworks();
-        
-        $('#form').fadeOut('slow');
     },
     launchFirework : function(fw, dispersion, speed) {
         fw.dx = dispersion;
