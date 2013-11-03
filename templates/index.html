@@ -17,10 +17,7 @@
     <!-- Load the fireworks script and stylesheet -->
     <script type="text/javascript" src="/static/fireworks.js"></script>
     <link type="text/css" href="/static/app.css" rel="stylesheet" />
-    <link href="static/fireworks2.css" rel="stylesheet">
-    <script type="text/javascript" src="/static/app.js"></script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "ur-e3af87c1-92ec-d721-2b7d-2bcfe923968", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+    <link href="/static/fireworks2.css" rel="stylesheet">
 </head>
 <body>
     <div id="banner">
@@ -43,12 +40,18 @@
                 Press <strong>any key</strong> or <strong>click</strong> for fireworks.<br>
             </div>
             <br><br>
-            <span class='st_facebook_hcount' displayText='Facebook'></span>
-            <span class='st_twitter_hcount' displayText='Tweet'></span>
+            <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style share">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
     </div>
     <aside id="library">
-      <img src="static/big-glow.png" id="big-glow" />
-      <img src="static/small-glow.png" id="small-glow" />
+      <img src="/static/big-glow.png" id="big-glow" />
+      <img src="/static/small-glow.png" id="small-glow" />
     </aside>
     <script>
     $("#greetbutton").on('click',function() {
@@ -60,7 +63,15 @@
         }
     });
     </script>
-    <script src="js/requestanimframe.js"></script>
-  <script src="js/fireworks2.js"></script>
+    <script src="/static/requestanimframe.js"></script>
+    <script type="text/javascript" src="/static/app.js"></script>
+    <script src="/static/fireworks2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#mainCanvas").css({'z-index' : '1000'});
+              $("#cv").css({'z-index' : '2000'});
+              $("#bg").css({'z-index' : '2000'});
+        });
+    </script>
 </body>
 </html>
