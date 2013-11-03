@@ -3,7 +3,7 @@ import re
 
 app = Flask(__name__)
 
-NAME_REGEX = r'[a-zA-Z-]+'
+NAME_REGEX = r'[a-zA-Z0-9-]+'
 
 @app.route('/')
 def homepage():
